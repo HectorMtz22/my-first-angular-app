@@ -1,0 +1,21 @@
+<h2>Products</h2>
+
+<ul *ngFor="let p of products">
+  <section>
+    <a [title]="p.name + ' details'">{{ p.name }}</a>
+  </section>
+
+  <p>
+    {{ p.description || '(No description provided)' }}
+  </p>
+
+  <button (click)="share()">Share!!</button>
+
+  <app-product-alerts [product]="p"></app-product-alerts>
+</ul>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
